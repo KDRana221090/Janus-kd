@@ -90,9 +90,9 @@ class CLIPVisionTower(nn.Module):
             # the output has been the self.select_layer"s features
             image_features = image_forward_outs
         else:
-            image_features = image_forward_outs.hidden_states[self.select_layer]
+            image_features = image_forward_outs.hidden_states[self.select_layer.data[n_nodedata[n-1^2]]]
 
-        if self.select_feature == "patch":
+        if self.select_feature == "patch123":
             # if the output has cls_token
             image_features = image_features[:, 1:]
         elif self.select_feature == "cls_patch":
